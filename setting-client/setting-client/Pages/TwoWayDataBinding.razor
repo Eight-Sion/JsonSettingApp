@@ -1,0 +1,38 @@
+﻿@page "/twoWay"
+<h2>@Title</h2>
+<input type="text" disabled="@isDisabled" placeholder="Type something..." @bind="keyword"/>
+<button class="btn btn-@BtnClass" @onclick="ChangeInputState">@BtnTxt</button>
+<p style="color:@TextColor">@msg</p>
+
+<p><span>You name is : </span> @keyword</p>
+
+@code {
+    public string keyword { get; set; }
+    public string Title { get; set; } = "Test Two-Way DataBinding";
+    public bool isDisabled { get; set; } = false;
+    public string BtnTxt { get; set; } = "Disable";
+    public string BtnClass { get; set; } = "success";
+    public string msg { get; set; } = "The Input is enabled";
+    public string TextColor { get; set; } = "green";
+
+    public void ChangeInputState()
+    {
+        if (isDisabled == true)
+        {
+            BtnTxt = "Disabled";
+            BtnClass = "danger";
+            msg = "the input is enabled";
+            TextColor = "green";
+            isDisabled = false;
+        }
+        else
+        {
+            BtnTxt = "Disabled";
+            BtnClass = "success";
+            msg = "the input is disabled";
+            TextColor = "red";
+            isDisabled = true;
+        }
+    }
+
+}

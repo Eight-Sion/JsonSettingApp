@@ -1,0 +1,14 @@
+﻿@page "/oneWay"
+<h2>@Title</h2>
+<input type="text" value="" disabled="@isDisabled"/>
+<button class="btn btn-@BtnClass">@BtnTxt</button>
+<p style="color:@TextColor">@msg</p>
+
+@code {
+    public string Title { get; set; } = "Test One-Way DataBinding";
+    public bool isDisabled { get; set; } = true;
+    public string BtnTxt { get; set; } = "Disable";
+    public string BtnClass { get; set; } = "success";
+    public string msg { get; set; } = "The Input is enabled";
+    public string TextColor { get; set; } = "green";
+}

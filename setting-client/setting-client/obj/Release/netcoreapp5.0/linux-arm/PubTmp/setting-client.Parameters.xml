@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="setting-client20200427072719" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Development\\gumi\\CSharp\\dotnet_core\\project\\setting-client\\setting-client\\obj\\Release\\netcoreapp5\.0\\linux-arm\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
